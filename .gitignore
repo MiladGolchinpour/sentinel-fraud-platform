@@ -1,3 +1,9 @@
 .venv
 .vscode
 .DS_Store
+__pycache__
+.streamlit/
+.env
+
+# Large datasets
+data/

@@ -1,0 +1,8 @@
+pandas
+fastapi
+scikit-learn
+xgboost
+pydantic
+shap
+pytest
+httpx2
