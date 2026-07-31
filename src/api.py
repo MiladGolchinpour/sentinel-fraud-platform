@@ -18,6 +18,10 @@ app = FastAPI(
 pipeline = joblib.load("models/xgb.pkl")
 explainer = joblib.load("models/explainer.pkl")
 
+@app.get("/status")
+def status():
+    return {"status": "ok"}
+
 @app.post("/predict", response_model=PredictionResponse)
 def predict(transaction: Transaction):
     # convert request to dataframe
