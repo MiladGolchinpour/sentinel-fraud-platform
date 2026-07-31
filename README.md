@@ -2,7 +2,7 @@
 
 > An end-to-end fraud detection platform for detecting fraudulent financial transactions using machine learning.
 
-![Python](https://img.shields.io/badge/Python-3.11-blue) ![XGBoost](https://img.shields.io/badge/XGBoost-2.x-orange) ![FastAPI](https://img.shields.io/badge/FastAPI-Ready-green) ![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red) ![Docker](https://img.shields.io/badge/Docker-Supported-2496ED) [![Sentinel CI](https://github.com/MiladGolchinpour/sentinel-fraud-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/MiladGolchinpour/sentinel-fraud-platform/actions/workflows/ci.yml)
+![Python](https://img.shields.io/badge/Python-3.11-blue) ![XGBoost](https://img.shields.io/badge/XGBoost-3.2.0-orange) ![FastAPI](https://img.shields.io/badge/FastAPI-Ready-green) ![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red) ![Docker](https://img.shields.io/badge/Docker-Supported-2496ED) [![Sentinel CI](https://github.com/MiladGolchinpour/sentinel-fraud-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/MiladGolchinpour/sentinel-fraud-platform/actions/workflows/ci.yml)
 
 Sentinel is a production-oriented machine learning system for real-time fraud detection. The project includes data preprocessing, feature engineering, model training, SHAP-based explainability, a REST API built with FastAPI, an interactive Streamlit dashboard, automated testing, and Dockerized deployment.
 
@@ -16,6 +16,11 @@ Sentinel is a production-oriented machine learning system for real-time fraud de
 - Interactive Streamlit dashboard
 - Dockerized deployment
 - Automated testing with Pytest
+
+## Live Demo
+
+- Dashboard: https://sentinel-dashboard-8586.onrender.com
+- API: https://sentinel-api-ad1r.onrender.com/docs
 
 ## Architecture
 
@@ -35,11 +40,13 @@ Sentinel/
 ├── dashboard/         # Streamlit dashboard
 ├── data/              # Dataset (ignored by Git)
 ├── models/            # Trained model and artifacts
+├── notebooks/         # EDA
 ├── src/               # Training, API and ML pipeline
 ├── tests/             # Unit tests
-├── .github/           # GitHub Actions
+├── docs/              # Images and stuff
+├── .github/           # GitHub Actions - CI
 ├── docker-compose.yml
-├── Dockerfile
+├── Dockerfile.api
 ├── requirements.txt
 └── README.md
 ```
@@ -74,7 +81,7 @@ uvicorn src.api:app --reload
 Start the dashboard:
 
 ```bash
-streamlit run dashboard/app.py
+streamlit run dashboard/Predictor.py
 ```
 
 API documentation: `http://localhost:8000/docs`
@@ -86,16 +93,6 @@ docker compose up --build
 ```
 
 This starts both the FastAPI service and the Streamlit dashboard.
-
----
-
-### Live Demo
-
-Dashboard:
-https://sentinel-dashboard-8586.onrender.com
-
-API:
-https://sentinel-api-ad1r.onrender.com/docs
 
 ---
 
@@ -114,7 +111,7 @@ data/raw/paysim.csv
 Then train the model:
 
 ```bash
-python src/training.py
+python -m src.training
 ```
 
 ---
@@ -145,19 +142,6 @@ python src/training.py
   ]
 }
 ```
-
-## Model Performance
-
-| Metric | Score |
-|--------|------:|
-| Accuracy | 99.98% |
-| Precision | 97.43% |
-| Recall | 87.59% |
-| F1 Score | 92.25% |
-| ROC-AUC | 99.94% |
-| PR-AUC | 97.90% |
-
-The model was evaluated on a held-out test set using XGBoost with engineered features and threshold tuning. Feature engineering was carefully reviewed to avoid target leakage and ensure realistic performance.
 
 ## Dashboard
 

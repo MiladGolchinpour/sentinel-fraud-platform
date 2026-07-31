@@ -9,3 +9,5 @@ httpx2
 uvicorn
 streamlit
 requests
+kagglehub
+plotly

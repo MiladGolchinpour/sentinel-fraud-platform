@@ -4,6 +4,7 @@
 __pycache__
 .streamlit/
 .env
+dashboard/load_data.py
 
 # Large datasets
 data/

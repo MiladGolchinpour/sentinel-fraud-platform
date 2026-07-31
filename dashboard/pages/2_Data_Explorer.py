@@ -2,7 +2,8 @@ import streamlit as st
 import pandas as pd
 from pathlib import Path
 
-DATA_PATH = Path("data/processed/paysim_features.parquet")
+ROOT = Path(__file__).resolve().parent.parent.parent
+DATA_PATH = ROOT / "data/processed/paysim_features.parquet"
 
 st.title("Transaction Explorer")
 
@@ -29,6 +30,6 @@ if DATA_PATH.exists():
 
 else:
     st.warning(
-        "Dataset is not included in deployment. "
+        "Full dataset is not included in deployment due to limited memory. "
         "Data exploration is available only in the local environment."
     )
