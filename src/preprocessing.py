@@ -4,7 +4,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
-from features import build_features
+from src.features import build_features
 
 PROCESSED_DATA_PATH = Path("data/processed/paysim_features.parquet")
 DROP_COLUMNS = ["nameOrig", "nameDest", "isFlaggedFraud",]

@@ -1,0 +1,57 @@
+{
+    "\ud83d\udfe2 Safe Payment": {
+        "type": "TRANSFER",
+        "amount": 589460.78,
+        "oldbalanceOrg": 637162.0,
+        "newbalanceOrig": 47701.22,
+        "oldbalanceDest": 0.0,
+        "newbalanceDest": 589460.78,
+        "step": 16,
+        "expected_probability": 0.00977635383605957,
+        "true_label": 0
+    },
+    "\ud83d\udfe2 Normal Transfer": {
+        "type": "CASH_IN",
+        "amount": 753864.61,
+        "oldbalanceOrg": 2142849.55,
+        "newbalanceOrig": 2896714.17,
+        "oldbalanceDest": 1621983.86,
+        "newbalanceDest": 868119.25,
+        "step": 8,
+        "expected_probability": 0.10603499412536621,
+        "true_label": 0
+    },
+    "\ud83d\udfe0 Borderline": {
+        "type": "CASH_OUT",
+        "amount": 402979.39,
+        "oldbalanceOrg": 402880.0,
+        "newbalanceOrig": 0.0,
+        "oldbalanceDest": 0.0,
+        "newbalanceDest": 402979.39,
+        "step": 397,
+        "expected_probability": 0.49935322999954224,
+        "true_label": 0
+    },
+    "\ud83d\udd34 Likely Fraud": {
+        "type": "CASH_OUT",
+        "amount": 13074.53,
+        "oldbalanceOrg": 13074.53,
+        "newbalanceOrig": 0.0,
+        "oldbalanceDest": 975600.51,
+        "newbalanceDest": 988675.04,
+        "step": 531,
+        "expected_probability": 0.8492937088012695,
+        "true_label": 1
+    },
+    "\ud83d\udd34 Extreme Fraud": {
+        "type": "CASH_OUT",
+        "amount": 634911.47,
+        "oldbalanceOrg": 634911.47,
+        "newbalanceOrig": 0.0,
+        "oldbalanceDest": 8841.66,
+        "newbalanceDest": 643753.13,
+        "step": 316,
+        "expected_probability": 0.9899682402610779,
+        "true_label": 1
+    }
+}

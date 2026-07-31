@@ -2,6 +2,6 @@
     "threshold": 0.5,
     "model": "xgb",
     "version": "0.1.0",
-    "trained_date": "2026-07-30",
+    "trained_date": "2026-07-31",
     "features": 12
 }
