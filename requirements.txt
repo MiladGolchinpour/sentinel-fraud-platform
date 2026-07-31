@@ -6,3 +6,6 @@ pydantic
 shap
 pytest
 httpx2
+uvicorn
+streamlit
+requests
