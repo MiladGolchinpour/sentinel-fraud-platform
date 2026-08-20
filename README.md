@@ -19,8 +19,8 @@ Sentinel is a production-oriented machine learning system for real-time fraud de
 
 ## Live Demo
 
-- Dashboard: https://sentinel-dashboard-8586.onrender.com
-- API: https://sentinel-api-ad1r.onrender.com/docs
+- Dashboard: https://sentinel-dashboard-8586.onrender.com (Inactive now due to Render limitations)
+- API: https://sentinel-api-ad1r.onrender.com/docs (Inactive now due to Render limitations)
 
 ## Architecture
 
